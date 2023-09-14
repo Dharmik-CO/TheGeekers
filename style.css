@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: SF PRO DISPLAY;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+body{
+    line-height: 1.6;
+}
+*::selection{
+    color: #fff;
+    background-color: #000;
+}
+h1{
+    font-weight: 400;
+    letter-spacing: -.1vw;
+    font-size: 1.34vw;
+}
+.headings h1{
+        color: transparent;
+        -webkit-text-stroke: 1px #000;
+        font-size: 7vw;
+        font-weight: 900;
+        letter-spacing: -8px;
+    }
+.headings{
+    display: flex;
+    gap: 40px;
+   justify-content: center;
+}
+.headings h1:hover{
+    color: #000;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+#search-input{
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+}
+#search-button{
+    padding: 10px 20px;
+    background-color: #138065;
+    color: #fff;
+    border: none;
+    font-size:18px ;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.search-result img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+}
+.search-result:hover img{
+    opacity: 0.8;
+}
+.search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-decoration: capitalize;
+}
+#Show-more-button{
+    background-color: #008cba;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.footer{
+    z-index: 1;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 7rem;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.footer p{
+    background-color: #262626;
+    color: #fff;
+}
+.footer i{
+    color: red;
+}
+@media screen and (max-width:768px) {
+    .search-results{
+        padding: 20px;
+    }
+    .search-result{
+        width: 45%;
+    }
+}
+@media screen and (max-width:480px) {
+    .search-result{
+        width: 100%;
+    }
+    .headings h1 {
+        letter-spacing: normal;
+        color: #000;
+    }
+}
